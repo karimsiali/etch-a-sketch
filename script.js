@@ -3,6 +3,7 @@ let btn = document.querySelector("button");
 let defaultSize = 16;
 let bgColor = "black";
 
+
 function createGrid(gridSize) {
     for (let i = 0; i < gridSize; i++) {
         for (let j = 0; j < gridSize; j++) {
@@ -16,7 +17,9 @@ function createGrid(gridSize) {
     draw();
 }
 
+
 createGrid(defaultSize);
+
 
 function draw() {
     container.childNodes.forEach((div) => {
@@ -31,15 +34,14 @@ function removeGrid() {
 }
 
 
-
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
     let newSize;
     do {
-        newSize = prompt("Grid size");
+        newSize = prompt("Grid size");        
     } while (+newSize > 100);
 
-    removeGrid();
-    createGrid(newSize);
-    
+    if (newSize != null) {
+        removeGrid();
+        createGrid(newSize);
+    } 
 })
-
