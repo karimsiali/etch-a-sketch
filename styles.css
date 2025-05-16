@@ -12,10 +12,6 @@
     height: 800px;
     width: 800px;
     padding: 0;
-    border: 3px red solid;
+    border: 1px solid #af2b0a;
     margin: auto;
-}
-
-.square {
-   /* border: black solid 1px;*/
 }

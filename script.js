@@ -1,5 +1,6 @@
 let container = document.querySelector(".container");
 let gridSize = 16;
+let bgColor = "black";
 
 console.log("width is: "+container.style.width);
 for (let i = 0; i < gridSize; i++) {
@@ -11,3 +12,9 @@ for (let i = 0; i < gridSize; i++) {
         container.appendChild(squareDiv);
     }
 }
+
+container.childNodes.forEach((div) => {
+    div.addEventListener("mouseenter", (e) => {
+        e.target.style.backgroundColor = bgColor;
+    })
+})
