@@ -6,13 +6,16 @@
 
 .container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
+    height: 800px;
+    width: 800px;
+    padding: 0;
+    border: 3px red solid;
+    margin: auto;
 }
 
 .square {
-    border: black solid 1px;
-    flex: 0 1 6.25%;
-    aspect-ratio: 1 / 1;
+   /* border: black solid 1px;*/
 }
