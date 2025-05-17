@@ -13,7 +13,7 @@
     width: 800px;
     padding: 0;
     border: 1px solid #af2b0a;
-    margin: auto;
+    /*margin: auto;*/
 }
 
 .buttons {
@@ -40,4 +40,17 @@ button:hover {
     background-color: #dc3545;
     color: #f1f1f1;
     
+}
+
+.middle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+select {
+    width: 15%;
+    height: 45px;
+    border-radius: 6px;
+    margin-top: 10%;
 }
