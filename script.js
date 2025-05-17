@@ -1,7 +1,9 @@
 let container = document.querySelector(".container");
 let btn = document.querySelector("button");
+let erase = document.querySelector(".erase");
+let color = document.querySelector("#color");
+let opacity = document.querySelector("#opacity");
 let defaultSize = 16;
-let bgColor = "black";
 
 
 function createGrid(gridSize) {
@@ -24,11 +26,22 @@ createGrid(defaultSize);
 function draw() {
     container.childNodes.forEach((div) => {
         div.addEventListener("mouseenter", (e) => {
-            e.target.style.backgroundColor = randomColor() /*bgColor*/;
-            e.target.style.opacity = +(e.target.style.opacity) + 0.1;
+            if (color.value == "black") {
+                e.target.style.backgroundColor = "black";
+            } else {
+                e.target.style.backgroundColor = randomColor();
+            }
+            
+            if (opacity.value == "fixed") {
+                e.target.style.opacity = "1";
+            } else {
+                e.target.style.opacity = +(e.target.style.opacity) + 0.1;
+            }
+            
         })
     })
 }
+
 
 function removeGrid() {
     container.innerHTML = "";
@@ -50,11 +63,18 @@ function randomColor() {
 btn.addEventListener("click", (e) => {
     let newSize;
     do {
-        newSize = prompt("Grid size");        
+        newSize = prompt("Grid size (No more than 100)");  
+        defaultSize = newSize;      
     } while (+newSize > 100);
 
     if (newSize != null) {
         removeGrid();
         createGrid(newSize);
     } 
+})
+
+
+erase.addEventListener("click", () => {
+    container.innerHTML = "";
+    createGrid(defaultSize);
 })

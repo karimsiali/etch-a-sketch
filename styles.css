@@ -16,16 +16,28 @@
     margin: auto;
 }
 
+.buttons {
+    display: flex;
+    width: 800px;
+    margin: 1rem auto;
+}
+
 button {
     margin: 1rem auto;
-    display: block;
     padding: 12px 20px;
     background-color: #f1f1f1;
     border: 1px solid #ebebeb;
+    font-size: 20px;
 }
 
 button:hover {
     cursor: pointer;
     border: 1px solid #afb6f0;
     box-shadow: 0 0 1px;
+}
+
+.erase {
+    background-color: #dc3545;
+    color: #f1f1f1;
+    
 }
