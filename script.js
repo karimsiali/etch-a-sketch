@@ -10,6 +10,7 @@ function createGrid(gridSize) {
             let squareDiv = document.createElement("div");
             squareDiv.style.width = (1 / gridSize * 100) + "%";
             squareDiv.style.height = (1 / gridSize * 100) + "%";
+            squareDiv.style.opacity = 0;
             container.appendChild(squareDiv);
         }
     }
@@ -23,13 +24,26 @@ createGrid(defaultSize);
 function draw() {
     container.childNodes.forEach((div) => {
         div.addEventListener("mouseenter", (e) => {
-            e.target.style.backgroundColor = bgColor;
+            e.target.style.backgroundColor = randomColor() /*bgColor*/;
+            e.target.style.opacity = +(e.target.style.opacity) + 0.1;
         })
     })
 }
 
 function removeGrid() {
     container.innerHTML = "";
+}
+
+
+// Generate a random RGB color
+function randomColor() {
+    let r, g, b;
+
+    r = Math.random() * (255 - 0) + 0;
+    g = Math.random() * (255 - 0) + 0;
+    b = Math.random() * (255 - 0) + 0;
+
+    return `RGB(${r}, ${g}, ${b})`;
 }
 
 
