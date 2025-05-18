@@ -3,6 +3,7 @@ let btn = document.querySelector("button");
 let erase = document.querySelector(".erase");
 let color = document.querySelector("#color");
 let opacity = document.querySelector("#opacity");
+let input = document.querySelector("input");
 let defaultSize = 16;
 
 

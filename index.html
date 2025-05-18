@@ -7,24 +7,44 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div class="buttons">
-        <button>Change size</button>
-        <button class="erase">Erase</button>
-    </div>
-    <div class="middle">
-        <select name="color" id="color">
-            <option value="black">Black</option>
-            <option value="rainbow">Rainbow</option>
-        </select>
+    
+    
+    <div class="content">
+
+        <div class="settings">
+            <h1>Etch-a-Sketch</h1>
+            <div class="options">
+                <div class="color">
+                    <label for="color">Choose coloring option:</label>
+                    <select name="color" id="color">
+                        <option value="black">Black</option>
+                        <option value="rainbow">Rainbow</option>
+                    </select>
+                </div>
+                <div class="opacity">
+                    <label for="opacity">Choose opacity setting</label>
+                    <select name="opacity" id="opacity">
+                        <option value="fixed">Fixed</option>
+                        <option value="progressive">Progressive</option>
+                    </select>
+                </div>
+
+                
+            </div>
+            
+
+            <div class="buttons">
+                <input type="number" max="100" name="grid-size" placeholder="Up to 100 grid size">
+                <button>Change size</button>
+                <button class="erase">Erase</button>
+            </div>
+
+        </div>
     
         <div class="container">
         
         </div>
-    
-        <select name="opacity" id="opacity">
-            <option value="fixed">Fixed</option>
-            <option value="progressive">Progressive</option>
-        </select>
+        
     </div>
     
 
