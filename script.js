@@ -62,16 +62,14 @@ function randomColor() {
 
 
 btn.addEventListener("click", (e) => {
-    let newSize;
-    do {
-        newSize = prompt("Grid size (No more than 100)");  
-        defaultSize = newSize;      
-    } while (+newSize > 100);
-
-    if (newSize != null) {
+    let newSize = input.value;
+    if (+newSize < 100 && newSize > 0) {
+        defaultSize = newSize;
         removeGrid();
         createGrid(newSize);
-    } 
+    } else {
+        alert("Wrong value, try again!");
+    }
 })
 
 
