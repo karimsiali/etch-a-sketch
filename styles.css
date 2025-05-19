@@ -20,13 +20,11 @@
 
 .buttons {
     display: flex;
-    width: 800px;
-    margin: 1rem auto;
-    gap: 1rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 button {
-    margin-left: 1rem;
     padding: 8px 20px;
     background-color: #f1f1f1;
     border: 1px solid #f55d5d;
@@ -47,7 +45,7 @@ button:hover {
 }
 
 .content {
-    min-height: 100vh;
+    min-height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,13 +59,12 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 0 20px;
     gap: 1rem;
 }
 
 select, label {
     display: block;
-    width: 80%;
+    width: 100%;
     border-radius: 6px;
     font-size: 1.4rem;
 }
@@ -92,10 +89,10 @@ select {
 }
 
 input {
-    margin-left: 1.2rem;
     width: 45%;
     height: 45px;
     font-size: 2rem;
+    padding-inline-start: 1rem;
 }
 
 .opacity, .color {
@@ -104,4 +101,15 @@ input {
 
 h1 {
     font-size: 5rem;
+}
+
+footer {
+    min-height: 5vh;
+    width: 100vw;
+    background-color: #dddddd;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
 }

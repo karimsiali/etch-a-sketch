@@ -63,7 +63,7 @@ function randomColor() {
 
 btn.addEventListener("click", (e) => {
     let newSize = input.value;
-    if (+newSize < 100 && newSize > 0) {
+    if (+newSize <= 100 && newSize > 0) {
         defaultSize = newSize;
         removeGrid();
         createGrid(newSize);

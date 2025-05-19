@@ -1,3 +1,4 @@
 # etch-a-sketch
 
-### This is an assignment for the Odin Project by the same name, which I finished and want to do extra credit.
+### This is an assignment for the Odin Project.
+#### I used my knowledge from the previous lessons in flexbox and DOM selectors and events to make this game.
